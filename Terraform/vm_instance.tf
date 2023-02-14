@@ -18,7 +18,9 @@ resource "google_compute_instance" "private_vm" {
                                 sudo apt-get update && sudo apt-get install -y google-cloud-cli
                                 sudo apt-get install kubectl
                                 sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
-                                gcloud container clusters get-credentials gke-cluster --zone us-east4-b --project my-project-ghazooo
+                                sudo git clone https://github.com/Ghazzooo/final_project_infra.git /home/ghazooo/dir
+                                sudo apt-get install -y ansible
+                                sudo ansible-playbook /home/jehad/test/ansible.yaml
                                 EOF
 
   boot_disk {
