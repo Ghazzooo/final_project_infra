@@ -1,0 +1,7 @@
+vpc_name = "my-vpc"
+region = "us-east4"
+subnet_region = "us-east4"
+subnet_name_1 = "management-subnet"
+subnet_name_2 = "restricted-subnet"
+subnet_cidr_1 = "10.0.1.0/24"
+subnet_cidr_2 = "10.0.2.0/24"
