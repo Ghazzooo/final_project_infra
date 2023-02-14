@@ -20,7 +20,7 @@ resource "google_compute_instance" "private_vm" {
                                 sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
                                 sudo git clone https://github.com/Ghazzooo/final_project_infra.git /home/ghazooo/dir
                                 sudo apt-get install -y ansible
-                                sudo ansible-playbook /home/jehad/test/ansible.yaml
+                                sudo ansible-playbook /home/ghazooo/dir/ansible.yaml
                                 EOF
 
   boot_disk {
