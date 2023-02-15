@@ -1,19 +1,8 @@
 # ITI-DevOps-Final-Project-Infrastructure
 
-### Build Docker Image For The Pyhton App From The Dockerfile , And Upload The Image To GCR :
-
-  * $ docker build gcp-python gcr.io/my-project-ghazooo/python_image
-  * $ docker push gcr.io/my-project-ghazooo/python_image
-
-### Pull Another Redis Image From Docker Hub Then Push It To GCR :
-
-  * $ docker pull redis
-  * $ docker tag redis gcr.io/my-project-ghazooo/redis_image
-  * $ docker push gcr.io/my-project-ghazooo/redis_image
-
 ![home_Page Image](./screenshot/project1.png)
 
-## create the infrastructure using terraform to do the follwing
+## create the infrastructure using terraform to do the following
   * Implement a private GKE Cluster
   * Deploy and configure Jenkins on GKE
   * Deploy the backend application on GKE using the Jenkins pipeline
@@ -28,6 +17,12 @@
 
 ![home_Page Image](./screenshot/userdata.png)
 
+## Create Ansible File to do the following on the cluster:
+
+* Connect to cluster
+* create jenkins namespace
+* Run jenkins yaml file 
+
 
 ### For Apply The Terraform Code :
 ```
@@ -35,6 +30,7 @@ $ terraform init
 $ terraform plan 
 $ terraform apply
 ```
+
 
 ## Then, shh to the VM and connect to the cluster
 
@@ -46,6 +42,11 @@ $ gcloud compute ssh --zone "us-east4-a" "private-vm-instance"  --tunnel-through
 $ gcloud container clusters get-credentials gke-cluster --zone us-east4-b --project my-project-ghazooo
 ```
 
+### To get Jenkins password:
+
+```
+$ kubectl exec --namespace jenkins -it svc/jenkins-service -c jenkins -- /bin/cat /var/jenkins_home/secrets/initialAdminPassword && echo
+```
 
 ### Get cluster pods and get load balancer external IP :
 
@@ -55,7 +56,7 @@ $ gcloud container clusters get-credentials gke-cluster --zone us-east4-b --proj
 
 ![home_Page Image](./screenshot/jenkins_start.png)
 
-####Jenkins now is ready to be used
+#### Jenkins now is ready to be used
 ### Next step: <a href="https://github.com/Abdalla1297/DevOps-Final-project-code" target="_blank">CI/CD in Jenkins</a>
 
 
