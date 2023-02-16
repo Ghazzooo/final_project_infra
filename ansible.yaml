@@ -1,11 +1,11 @@
 - hosts: localhost
   become: yes
   tasks:
-    - name: Task no.1 Connect to cluster
+    - name: Task no.(1) Connect to cluster
       shell: gcloud container clusters get-credentials gke-cluster --zone us-east4-b --project my-project-ghazooo
 
-    - name: Task no.2 Create Jenkins namespace
+    - name: Task no.(2) Create Jenkins namespace
       shell: kubectl create namespace jenkins
 
-    - name: Task no.3 Deploying jenkins & loadbalancer servies
+    - name: Task no.(3) Deploying jenkins & loadbalancer servies
       command: kubectl apply -f /home/ghazooo/dir/jenkins_deploy/
