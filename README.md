@@ -57,7 +57,7 @@ $ kubectl exec --namespace jenkins -it svc/jenkins-service -c jenkins -- /bin/ca
 ![home_Page Image](./screenshot/jenkins_start.png)
 
 #### Jenkins now is ready to be used
-### Next step: <a href="https://github.com/Abdalla1297/DevOps-Final-project-code" target="_blank">CI/CD in Jenkins</a>
+### Next step: <a href="https://github.com/Ghazzooo/final_project_app/blob/main/README.md" target="_blank">CI/CD in Jenkins</a>
 
 
 
