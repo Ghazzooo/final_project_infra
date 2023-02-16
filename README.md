@@ -54,8 +54,6 @@ $ kubectl exec --namespace jenkins -it svc/jenkins-service -c jenkins -- /bin/ca
 
 ![home_Page Image](./screenshot/service.png)
 
-## Jenkins Link: <a href="35.245.131.12:8080 " target="_blank">35.245.131.12:8080</a>
-
 ![home_Page Image](./screenshot/jenkins_start.png)
 
 #### Jenkins now is ready to be used
